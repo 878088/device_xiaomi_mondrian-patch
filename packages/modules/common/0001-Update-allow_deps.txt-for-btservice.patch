@@ -1,0 +1,42 @@
+From 9b86c953bcd1b60a022f96cb39200b38b4708251 Mon Sep 17 00:00:00 2001
+From: flakeforever <113103193+flakeforever@users.noreply.github.com>
+Date: Mon, 31 Mar 2025 22:08:16 -0700
+Subject: [PATCH] Update allow_deps.txt for btservice
+
+Apex-Size-Increase: lhdc codec libraries: ~15 MiB (if libs exists), libstdc++.so ~22 KiB,
+Previous-Platform-Support: N/A
+AOSP-First: no
+Test-Info: n/a
+Test: manual
+
+Change-Id: I469ef42bc875c2615acbf5771609730d75567b6d
+---
+ build/allowed_deps.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/build/allowed_deps.txt b/build/allowed_deps.txt
+index 9ab9258..dc5da10 100644
+--- a/build/allowed_deps.txt
++++ b/build/allowed_deps.txt
+@@ -979,6 +979,7 @@ libstatspull_bindgen(minSdkVersion:apex_inherit)
+ libstatssocket_headers(minSdkVersion:29)
+ libstd(minSdkVersion:29)
+ libstd_detect.rust_sysroot(minSdkVersion:29)
++libstdc++(minSdkVersion:33)
+ libstrsim(minSdkVersion:29)
+ libsync(minSdkVersion:(no version))
+ libsync_wrapper(minSdkVersion:29)
+@@ -1337,6 +1338,10 @@ prebuilt_libc_headers(minSdkVersion:(no version))
+ prebuilt_libcap(minSdkVersion:(no version))
+ prebuilt_libclang_rt.builtins(minSdkVersion:(no version))
+ prebuilt_libclang_rt.ubsan_minimal(minSdkVersion:(no version))
++prebuilt_liblhdc(minSdkVersion:(no version))
++prebuilt_liblhdcBT_enc(minSdkVersion:(no version))
++prebuilt_liblhdcv5(minSdkVersion:(no version))
++prebuilt_liblhdcv5BT_enc(minSdkVersion:(no version))
+ prebuilt_libnativehelper_compat_libc++(minSdkVersion:(no version))
+ prebuilt_libnativehelper_header_only(minSdkVersion:(no version))
+ prebuilt_libperfetto_client_experimental(minSdkVersion:(no version))
+-- 
+2.43.0
+
